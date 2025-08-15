@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo_round_-ai-brush-removebg-gawczdga.png">
+    <title>Jobzenter - Software Training And Placements</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+  /* keep page from horizontal overflow without changing look */
+  html, body { overflow-x: hidden; }
+
+  /* make only section images respect container width */
+  .section.why-us img,
+  .section.courses .item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ensure owl stays clipped inside its viewport */
+  .owl-carousel,
+  .owl-carousel .owl-stage-outer { overflow: hidden; }
+
+
+</style>
+
+  </head>
+
+<body>
+  <!-- Topbar Start -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+  /* ===== Topbar (yellow strip) ===== */
+.topbar-top {
+  background: #ffd900 !important;     /* brand yellow */
+}
+
+/* Row height + vertical centering */
+.topbar {
+  min-height: 48px;
+  align-items: center;
+}
+
+/* Left: address / phone / email */
+.topbar-info a,
+.topbar-info small {
+  font-size: 1rem;                     /* matches screenshot scale */
+  line-height: 1.2;
+  color: #555 !important;              /* dark text on yellow */
+  text-decoration: none;
+}
+
+.topbar-info a:hover,
+.topbar-info a:focus {
+  color: #111 !important;
+  text-decoration: underline;
+}
+
+/* Phone looks lighter (like screenshot) */
+.top-text {
+  color: rgba(0,0,0,.45) !important;
+  letter-spacing: .2px;
+}
+
+/* Left icons (map / phone / mail) – solid black */
+.topbar-info i {
+  color: #000 !important;
+}
+
+/* Spacing on the left group */
+.topbar-info > * { margin-right: 1.25rem; }
+.topbar-info > *:last-child { margin-right: 0; }
+
+/* Middle vertical divider before socials */
+.search-btn {
+  border-color: rgba(0,0,0,.45) !important;
+}
+
+/* Right: social icons */
+.topbar-icon i {
+  font-size: 1.05rem;                  /* neat size */
+  color: #000 !important;              /* visible on yellow */
+  transition: transform .15s ease;
+}
+.topbar-icon a { margin-right: 1.25rem; }
+.topbar-icon a:last-child { margin-right: 0; }
+.topbar-icon a:hover i,
+.topbar-icon a:focus i { transform: translateY(-1px); }
+
+/* Accessibility: visible focus on yellow */
+.topbar a:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+  /* ===== Responsive tweaks ===== */
+@media (max-width: 992px) {            /* stack nicely on tablets/phones */
+  .topbar {
+    flex-wrap: wrap;
+    gap: .5rem 0;
+  }
+  .topbar-info {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .search-btn {                        /* hide empty center column */
+    display: none !important;
+  }
+  .topbar-icon {
+    flex: 1 1 100%;
+    justify-content: center;
+    
+    border: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 420px) {            /* prevent overflow on very small phones */
+  .topbar-info a,
+  .topbar-info small {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* Show topbar on desktops only */
+@media (max-width: 991.98px) {       /* Bootstrap “lg” breakpoint */
+  .topbar-top {
+    display: none !important;        /* hide on phones + tablets */
+  }
+}
+
+/* Remove the Bootstrap right border and draw our own full-height rule */
+.search-btn {
+  position: relative;
+  border-right: 0 !important;
+}
+/*.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 2px;
+  background: rgba(0,0,0,.55);                /* same tone as screenshot 
+}
+/* --- Fix the divider pseudo element --- */
+/*.search-btn::after {
+  right: 0;                 /* was empty -> makes the line flush right 
+  width: 2px;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,.55);
+}*/
+
+/* --- Space between the icon and its label text (left group) --- */
+.topbar-info a i,
+.topbar-info small i {
+  /* use logical property so it works LTR/RTL */
+  margin-inline-end: 0.6rem !important;   /* increase if you want more space */
+  vertical-align: middle;                 /* keeps icon aligned with text */
+  line-height: 1;
+}
+
+/* Optional: consistent gap between the three left items */
+.topbar-info > * {
+  margin-right: 2rem;                  /* tweak as needed */
+}
+.topbar-info > *:last-child { margin-right: 0; }
+/* Blink both icon + number together every 2s */
+/* FAST hard blink: fully off/on, no fade */
+.phone-blink {
+  animation: jz-blink-hard 1s steps(1, end) infinite; /* 0.6s cycle = 0.3s on, 0.3s off */
+  will-change: opacity;
+}
+
+@keyframes jz-blink-hard {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .phone-blink { animation: none; }
+}
+
+
+</style>
+  <div class="container-fluid topbar-top bg-primary">
+    <div class="container">
+      <div class="d-flex justify-content-between topbar py-2">
+        <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+          <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>Jobzenter, Pallikaranai, Chennai</a>
+          <small class="me-4 top-text phone-blink" style="font-size: 18px; color: #000 !important; font-weight:400;">
+            <i class="fas fa-phone-alt me-2 text-dark top-text"></i>
+            +91 9057770577
+          </small>
+
+
+          <a href="mailto:admin@jobzenter.in" class="text-secondary">
+            <i class="fas fa-envelope me-2 text-dark"></i>admin@jobzenter.in
+          </a>
+        </div>
+        <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+          <div class="search-form">
+            <form method="post" action="index.html">
+              <div class="form-group">
+                <div class="d-flex"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center topbar-icon">
+          <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL" class="me-4"><i class="fab fa-facebook-f text-dark" aria-label="Facebook"></i></a>
+          <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09" class="me-4"><i class="fab fa-twitter text-dark" aria-label="Twitter"></i></a>
+          <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" class="me-4"><i class="fab fa-instagram text-dark" aria-label="Instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jobzenter-offl-a61489314/" class="me-4"><i class="fab fa-linkedin-in text-dark" aria-label="LinkedIn"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+<!-- Navbar Start -->
+ 
+<div class="container-fluid" style="background-color: #000000;">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-lg py-lg-0" >
+      <a href="index.html" class="navbar-brand">
+        <h1 class="mb-0 display-5">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+          <img src="../img/JZ LOGO-02.png" alt="Logo" style="height: 2em; vertical-align: middle; margin-left: 1%;">
+        </h1>
+      </a>
+      <button style="background-color: #000000 !important;" class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse me-n3" id="navbarCollapse" ">
+        <div class="navbar-nav me-auto">
+          <a href="../index.html" class="nav-item nav-link">Home</a>
+          <a href="../courses.html" class="nav-item nav-link">Courses</a>
+
+          <!-- Dropdown: Services -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Services <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="../bt/index.html">Bootcamps</a></li>
+              <li><a class="dropdown-item" href="resumebuild.html">Resume Building</a></li>
+              <li><a class="dropdown-item" href="interviewprep.html">Interview Preparation</a></li>
+              <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+              <li><a class="dropdown-item" href="../careerpage.html">Career Counseling</a></li>
+            </ul>
+          </div>
+
+          <a href="../referandearn.html" class="nav-item nav-link">Refer & Earn</a>
+          <a href="../contact.html" class="nav-item nav-link">Reach Us</a>
+
+          <!-- Dropdown: Facts -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="factsDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Facts <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="factsDropdown">
+              <li><a class="dropdown-item" href="../quiz.html">Quiz Time</a></li>
+            </ul>
+          </div>
+
+          <a href="../offlinebenefits/index.html" class="nav-item nav-link">Our Classroom</a>
+          <a href="../blogjobz/index.html" class="nav-item nav-link">Tech Blogs</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- ===== Updated Navbar End ===== -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome for the dropdown icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Custom Navbar Styling -->
+<style>
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start !important; /* aligns everything left */
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    width: 100%;  /* make links span full width */
+    text-align: left !important; /* text left aligned */
+    padding-left: 1rem; /* optional padding */
+  }
+
+  /* Ensure dropdown menu also aligns left */
+  .navbar-nav .dropdown-menu {
+    text-align: left;
+  }
+}
+
+
+  .navbar, .navbar-dark {
+    background-color: #000000 !important;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+
+  .navbar-nav .nav-link:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: yellow;
+  }
+
+  .navbar-brand {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .dropdown-menu {
+    background-color: #000000;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000000;
+    color: yellow;
+  }
+
+  .fa-caret-down {
+    margin-left: 5px;
+  }
+  @media (max-width: 991.98px) {
+  .navbar .dropdown,
+  .navbar .dropdown-menu {
+    position: static !important;
+  }
+  .navbar .dropdown-menu {
+    float: none; /* ensures it stacks inside the collapse */
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand h1 {
+    font-size: 1.5rem !important;
+  }
+  .navbar-brand h1 img {
+    height: 1.5em !important;
+  }
+}
+</style>
+<!-- Navbar End -->
+
+<!-- Main Banner Section Start -->
+<section class="section main-banner" id="top" data-section="section1" style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;">
+  <img src="assets/images/headerpicoffline.jpg" alt="Offline Training Banner" style="width: 100%; height: 100%; object-fit: contain; display: block;" />
+
+  <div class="video-overlay header-text" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center;">
+    <div class="caption" style="text-align: center; color: #fff;">
+      <h6>Empowering Careers with Real-World Skills</h6>
+      <h2><em>VISIT</em><br>US OFFLINE</h2>
+      <div class="main-button">
+        <div class="scroll-to-section"><a href="#section2" style="background: #ffd900 ; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Learn More</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Main Banner Section End -->
+
+
+<!-- Features Section Start -->
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-12">
+        <div class="features-post">
+          <div class="features-content">
+            <div class="content-show">
+              <h4><i class="fa fa-pencil"></i>Our Courses</h4>
+            </div>
+            <div class="content-hide">
+              <p>Explore a wide range of courses, such as Software Testing, Business Intelligence, Full Stack Development, AWS DevOps, and UI/UX Design. These programs are specifically crafted to help you develop essential skills. You'll gain practical, hands-on experience to ensure you are well-equipped to thrive in your career. Our goal is to prepare you for real-world applications, giving you the tools you need to succeed</p>
+              <p class="hidden-sm"></p>
+              <div class="scroll-to-section"><a href="../courses.html">More Info.</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12">
+        <div class="features-post second-features">
+          <div class="features-content">
+            <div class="content-show">
+              <h4><i class="fa fa-graduation-cap"></i>Services We Offer</h4>
+            </div>
+            <div class="content-hide">
+              <p>
+                We offer a range of services aimed at supporting your career, including Resume Building, Career Counseling, Job Portal Access, and Interview Preparation. Our expert guidance helps you develop confidence and skills to reach your career goals. With these services, you can excel in your professional journey and unlock new opportunities for success. Let us help you shape a rewarding future.</p>
+              <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
+              <div class="scroll-to-section"><a href="../service.html">Details</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-12">
+        <div class="features-post third-features">
+          <div class="features-content">
+            <div class="content-show">
+              <h4><i class="fa fa-book"></i>Online Classes</h4>
+            </div>
+            <div class="content-hide">
+              <p>We provide flexible online classes for your convenience, but we highly recommend our offline programs. Offline classes offer a more interactive experience, including face-to-face guidance, hands-on activities, and real-world scenarios. These offline settings help you gain a deeper understanding of the skills needed for your career, allowing you to practice in a more effective, realistic environment
+
+              </p>
+              <p class="hidden-sm"></p>
+              <div class="scroll-to-section"><a href="../contact.html">Read More</a></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features Section End -->
+
+<!-- Why Us Section Start -->
+<section class="section why-us" data-section="section2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Why choose Jobzenter?</h2>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div id='tabs'>
+          <ul>
+            <li><a href='#tabs-1'>Exclusive Free Services</a></li>
+            <li><a href='#tabs-2'>Industry-Ready Training</a></li>
+            <li><a href='#tabs-3'>Dedicated Career Support</a></li>
+          </ul>
+          <section class='tabs-content'>
+            <article id='tabs-1'>
+              <div class="row">
+                <div class="col-md-6">
+                <img src="assets/images/1.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Exclusive Free Services</h4>
+                  <p>At Jobzenter, we frequently offer free access to premium services, such as resume building, career counseling, and mock interviews. This is a rare opportunity in the industry, as most software training institutes charge for these. We believe in providing real value that goes beyond the typical offerings, ensuring you get the best support without extra costs.</p>
+                </div>
+              </div>
+            </article>
+            <article id='tabs-2'>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="assets/images/industryready.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Industry-Ready Training</h4>
+                  <p>Our programs are specifically designed to equip you with the practical skills needed to thrive in today’s fast-paced tech industry. We focus on hands-on learning, real-world projects, and expert guidance to ensure that you not only learn the theory but also apply it in real scenarios. With Jobzenter, you're prepared to take on challenges in the real world.
+
+                  </p> 
+                  <p></p>
+                </div>
+              </div>
+            </article>
+            <article id='tabs-3'>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="assets/images/3.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                  <h4>Dedicated Career Support</h4>
+                  <p>We go beyond just training, offering comprehensive career services to help you succeed. From personalized job portal access to career counseling and interview preparation, we are with you every step of the way. Our expert career coaches help you build the skills and confidence necessary to secure the right job opportunities and excel in your professional journey.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Why Us Section End -->
+<style>
+  .down-content h4{
+    font-size: 14px !important;
+  }
+/* Keep the width of items consistent */
+/* Owl carousel item adjustments */
+.owl-carousel .item {
+  width: 210px !important;
+  height: auto; /* Adjust to auto for better responsiveness */
+  display: flex;
+  flex-direction: column; /* Ensures image and text are stacked vertically */
+  justify-content: center; /* Centers the content vertically */
+  align-items: center; /* Centers the content horizontally */
+  margin: 0 auto; /* Center the items horizontally */
+}
+
+/* Mobile view adjustments */
+@media(max-width: 560px) {
+  .owl-carousel .item {
+    width: 80% !important; /* Adjust width to take up more space on mobile */
+    height: auto; /* Ensures the item height is responsive */
+    margin: 0 auto; /* Centers the items within the carousel */
+  }
+
+  .owl-carousel {
+    display: flex;
+    justify-content: center; /* Centers the carousel itself */
+    align-items: center; /* Aligns the content */
+  }
+}
+
+
+</style>
+<!-- Courses Section Start -->
+<section class="section courses" data-section="section4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Choose Your Course</h2>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme" >
+        <!-- Course 1: Software Testing -->
+        <div class="item">
+          <img src="assets/images/tesingcourse.jpg" class="img-fluid w-100" alt="Course #1">
+          <div class="down-content">
+            <h4>Software Testing</h4>
+            <p>Learn testing methodologies to detect and resolve bugs, ensuring quality in software development.
+              </p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2: Business Intelligence -->
+        <div class="item">
+          <img src="assets/images/4.png" class="img-fluid w-100" alt="Course #2" style="height: 150px;">
+          <div class="down-content">
+            <h4>Business Intelligence</h4>
+            <p>Utilize BI tools to analyze data and drive business decisions, enhancing performance and insights.</p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="BUSINESS INTELLIGENCE">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <!-- Course 3: Full-Stack Development -->
+        <div class="item">
+          <img src="assets/images/full stack.png" class="img-fluid w-100" alt="Course #3" style="height: 150px;">
+          <div class="down-content">
+            <h4> Java Full-Stack Development</h4>
+            <p>Gain expertise in front-end and back-end technologies like Java, Spring Boot, and React to build dynamic applications.</p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="FULL-STACK DEVELOPMENT">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4: AWS DevOps -->
+        <div class="item">
+          <img src="assets/images/awscourse.jpg" class="img-fluid w-100" alt="Course #4">
+          <div class="down-content">
+            <h4>AWS DevOps</h4>
+            <p>Master cloud deployment, management, and automation using AWS tools, with a focus on infrastructure as code.
+            </p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="AWS DEVOPS">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5: UI/UX Design -->
+        <div class="item">
+         <img src="assets/images/uianduxcourse.jpg" class="img-fluid w-100" alt="Course #5">
+          <div class="down-content">
+            <h4>UI/UX Design</h4>
+            <p>Design intuitive, user-friendly interfaces while applying core principles of user experience and usability for digital platforms.</p>
+
+<br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="UI/UX Design">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6: MERN Stack -->
+        <div class="item">
+          <img src="assets/images/mern.png" class="img-fluid w-100" alt="Course #1" style="height: 150px;">
+          <div class="down-content">
+            <h4>MERN Stack</h4>
+            <p>Learn full-stack web development using MongoDB, Express, React, and Node.js to create powerful and scalable web applications.</p>
+<br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 7: React native -->
+        <div class="item">
+          <img src="assets/images/3.png" class="img-fluid w-100" alt="Course #1" style="height: 150px;">
+          <div class="down-content">
+            <h4>React Native</h4>
+            <p>Develop cross-platform mobile apps for iOS and Android using React Native, with a shared codebase for efficiency.</p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 8: Medical Coding-->
+        <div class="item">
+          <img src="assets/images/medicalBilling.png" class="img-fluid w-100" alt="Course #1" style="height: 150px;">
+          <div class="down-content">
+            <h4>Medical Billing</h4>
+            <p>Learn the essential skills needed to code medical records for billing, claims processing, and  documentation accurately.</p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+                <!-- Course 9: Python Full Stack Development-->
+        <div class="item">
+          <img src="assets/images/fsdcourse.jpg" class="img-fluid w-100" alt="Course #1">
+          <div class="down-content">
+            <h4>Python Full Stack Development</h4>
+  <p>Master full-stack development with Python, Django, and React to Develop dynamic web applications.</p>
+<br>   
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+                <!-- Course 10: .NET + Angular-->
+        <div class="item">
+          <img src="assets/images/net.png" class="img-fluid w-100" alt="Course #1" style="height: 150px;">
+          <div class="down-content">
+            <h4>.NET + Angular</h4>
+            <p>Develop dynamic and interactive web applications with .NET for back-end and Angular for front-end, creating seamless user interfaces.</p>
+
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="SOFTWARE TESTING">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+                <!-- Course 11: CCNA -->
+        <div class="item">
+          <img src="assets/images/CCNA.png" class="img-fluid w-100" alt="Course #3" style="height: 150px;">
+          <div class="down-content">
+            <h4>CISCO Certified Network Associate</h4>
+            <p>Prepare for the CCNA exam with this course, learning the fundamentals of networking, IP addressing, routing, and switching.</p>
+            <br>
+            <div class="text-button-pay">
+              <a href="#" class="enroll-btn" data-course="FULL-STACK DEVELOPMENT">ENROLL NOW<i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Courses Section End -->
+
+<style></style>
+<!-- Modal for Enrollment Form -->
+<div id="enrollmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Enter Your Details to Enroll</h2>
+    <form id="enrollmentForm" method="POST" action="send_enrollment.php">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your 10-digit number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" placeholder="Your State" required>
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="SOFTWARE TESTING">Software Testing</option>
+          <option value="FULL-STACK DEVELOPMENT">Full Stack Development</option>
+          <option value="BUSINESS INTELLIGENCE">Business Intelligence</option>
+          <option value="AWS DEVOPS">AWS DevOps</option>
+          <option value="UI/UX Design">UI/UX Design</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- CSS Styling for the Modal Form -->
+<style>
+  /* Modal background styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  /* Modal content styling */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center modal both vertically and horizontally */
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+  /* Close button styling */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* Form styling */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  /* Submit button styling */
+  .submit-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #e0a800;
+  }
+</style>
+
+<!-- JavaScript to Handle Modal Opening and Closing -->
+<script>
+  var modal = document.getElementById("enrollmentModal");
+  var closeModal = document.getElementsByClassName("close")[0];
+  var enrollButtons = document.querySelectorAll(".enroll-btn");
+
+  // Open modal when enroll button is clicked
+  enrollButtons.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      modal.style.display = "block";
+      document.getElementById("course").value = this.getAttribute("data-course"); // Set selected course
+    });
+  });
+
+  // Close modal when 'x' is clicked
+  closeModal.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside of the modal
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<!-- JavaScript for Handling SweetAlert Form Submission -->
+<script>
+  // Function to handle form submission
+  document.getElementById('enrollmentForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting the default way
+
+    var formData = new FormData(this);
+
+    fetch('send_enrollment.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // First SweetAlert for successful enrollment
+        Swal.fire({
+          title: 'Registration Successful!',
+          text: 'Your enrollment was successful. Redirecting...',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          timer: 3000, // Auto close after 3 seconds
+          background: '#FFFFFF', // Yellow background for success
+          iconColor: '#ffcc00'   // Yellow icon color
+        }).then((result) => {
+          if (result.isConfirmed || result.isDismissed) {
+            // Second SweetAlert to join WhatsApp group
+            Swal.fire({
+              title: 'Join our WhatsApp Group',
+              text: 'Click below to join our WhatsApp group for free services and updates!',
+              icon: 'info',
+              confirmButtonText: 'Join WhatsApp Group',
+              background: '#FFFFFF',
+              iconColor: '#00c851', // Green icon color
+              showCancelButton: true,
+              cancelButtonText: 'Cancel'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Redirect to WhatsApp group after confirmation
+                window.location.href = 'https://chat.whatsapp.com/JBQ9NfEOqrUKvkm9kzGTjh'; // Your WhatsApp group link
+              }
+            });
+          }
+        });
+      } else {
+        // Handle error case
+        Swal.fire('Error', data.message, 'error');
+      }
+    })
+    .catch(error => {
+      Swal.fire('Error', 'There was a problem submitting your form', 'error');
+    });
+  });
+</script>
+
+
+
+<!-- Contact Section Start -->
+<section class="section contact" data-section="section6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Let’s Keep In Touch</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-md-6">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                </fieldset>
+              </div>
+              <div class="col-md-6">
+                <fieldset>
+                  <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                </fieldset>
+              </div>
+            <div class="col-md-12">
+              <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Let us know if you have any doubts ( feel free )" required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="button">send message </button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124430.93812771633!2d80.06595611572263!3d12.94195331596094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d3dc0eec4a7%3A0xaab62661dc43cafc!2sJobzenter%20software%20training%20and%20placement!5e0!3m2!1sen!2sin!4v1754554685890!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- Footer Start -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p><i class="fa fa-copyright"></i> Copyright 2025 by
+        <a href="https://jobzenter.in/" rel="sponsored" target="_parent">JOBZENTER</a> - all rights reserved<br>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Scripts -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/video.js"></script>
+<script src="assets/js/slick-slider.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
+
+    var showSection = function showSection(section, isAnimate) {
+      var
+      direction = section.replace(/#/, ''),
+      reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+      reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $('body, html').animate({
+          scrollTop: reqSectionPos },
+        800);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+    };
+
+    var checkSection = function checkSection() {
+      $('.section').each(function () {
+        var
+        $this = $(this),
+        topEdge = $this.offset().top - 80,
+        bottomEdge = topEdge + $this.height(),
+        wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var
+          currentId = $this.data('section'),
+          reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+          reqLink.closest('li').addClass('active').siblings().removeClass('active');
+        }
+      });
+    };
+
+    $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+      if($(e.target).hasClass('external')) {
+        return;
+      }
+      e.preventDefault();
+      $('#menu').removeClass('active');
+      showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+</script>
+
+<!-- Navbar Hover Effects -->
+<style>
+  .navbar-nav .nav-link {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      padding: 10px 8px;
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
+  .navbar-nav .nav-link::after {
+      content: none !important;   /* kills the sliding bar */
+  }
+
+  .navbar-nav .nav-link:hover::after {
+      visibility: visible;
+      width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+      color: yellow;
+  }
+
+  .dropdown-menu {
+      background-color: black;
+      border: none;
+      padding: 10px;
+  }
+
+  .dropdown-item {
+      color: white;
+  }
+
+  .dropdown-item:hover {
+      background-color: #1e1e1e;
+      color: yellow;
+  }
+
+  .fa-caret-down {
+      margin-left: 5px;
+  } 
+  .navbar-nav .nav-link {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: yellow !important;                 /* no yellow on hover */
+  text-decoration: underline;             /* simple underline */
+  text-underline-offset: 3px;             /* nicer spacing */
+  text-decoration-thickness: 2px;         /* optional: thicker line */
+}
+
+/* Safety: ensure no leftover hover animation rules apply */
+.navbar-nav .nav-link:hover::after { content: none !important; }
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #000;   /* keep your black menu */
+  color: yellow;              /* keep text white */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+</style>
+
+<script>
+  // Smooth scroll to sections based on the data-section attribute
+  var showSection = function(section, isAnimate) {
+    var direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top;
+
+    if (isAnimate) {
+      $('html, body').animate({
+        scrollTop: reqSectionPos
+      }, 800); // Adjust the speed here (800ms for smooth scrolling)
+    } else {
+      $('html, body').scrollTop(reqSectionPos);
+    }
+  };
+
+  $('.main-menu, .scroll-to-section').on('click', 'a', function(e) {
+    if ($(e.target).hasClass('external')) {
+      return;
+    }
+    e.preventDefault();
+    $('#menu').removeClass('active');
+    showSection($(this).attr('href'), true);
+  });
+
+  $(window).scroll(function() {
+    checkSection();
+  });
+
+  var checkSection = function() {
+    $('.section').each(function() {
+      var $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+
+      if (topEdge < wScroll && bottomEdge > wScroll) {
+        var currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+        reqLink.closest('li').addClass('active').siblings().removeClass('active');
+      }
+    });
+  };
+</script>
+
+</body>
+
+
+</html>
