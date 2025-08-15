@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jobzenter - Refer and Earn</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Loader CSS -->
+  <style>
+    /* Loader overlay */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Loader animation */
+    .loader-animation {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ffc107;
+      border-top: 6px solid #000;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    /* Animation keyframes */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Navbar styling */
+    .navbar-nav .nav-link {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      padding: 10px 8px;
+      font-size: 0.9rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      visibility: visible;
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: yellow;
+    }
+
+    .dropdown-menu {
+      background-color: black;
+      border: none;
+      padding: 10px;
+    }
+
+    .dropdown-item {
+      color: white;
+    }
+
+    .dropdown-item:hover {
+      background-color: #1e1e1e;
+      color: yellow;
+    }
+
+    .navbar {
+      min-height: 100px;
+    }
+
+    .navbar-nav {
+      gap: 15px;
+    }
+
+    /* Hide navbar items and toggler on mobile; center only logo and title */
+    @media (max-width: 768px) {
+      .navbar-collapse,
+      .navbar-toggler {
+          display: none !important;
+      }
+      .navbar-brand {
+          justify-content: center;
+      }
+    }
+
+    /* Footer styling */
+    .bg-dark {
+      background-color: #000 !important;
+    }
+
+    .display-5 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .text-center p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-animation"></div>
+</div>
+
+<!-- Navbar Start -->
+<div class="container-fluid" style="background-color: black;">
+  <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-lg py-lg-0" style="min-height: 100px;">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" style="width: 100%;">
+              <h1 class="mb-0 display-6" style="font-size: 3rem; color: yellow; margin-right: 0.2em;">
+                  <span>JOB</span><span style="color: white;">ZENTER</span>
+              </h1>
+              <img src="img/JZ LOGO-02.png" alt="Logo" style="height: 5em; margin-left: 0;">
+          </a>
+          <div class="collapse navbar-collapse me-n3 d-none d-lg-flex" id="navbarCollapse">
+              <ul class="navbar-nav ms-auto d-flex align-items-center">
+                  <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../service.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../courses.html">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Refer and Earn</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../quiz.html">Quiz</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="freeServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Free Services <i class="fa fa-caret-down"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="freeServicesDropdown">
+                          <li><a class="dropdown-item" href="../offlinebenefits/index.html">Visit Us Offline</a></li>
+                          <li><a class="dropdown-item" href="../bt/index.html">Bootcamps</a></li>
+                          <li><a class="dropdown-item" href="../resumebuild.html">Resume Building</a></li>
+                          <li><a class="dropdown-item" href="../interviewprep.html">Interview Preparation</a></li>
+                          <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+                          <li><a class="dropdown-item" href="../service.html">Career Counseling</a></li>
+                          <li><a class="dropdown-item" href="../blogjobz/index.html">Blogs</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a href="../contact.html" class="nav-link">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+</div>
+<!-- Navbar End -->
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row mt-30 mb-30">
+      <div class="col-sm-12 col-md-3">
+        <div class="share-boxes">
+          <img src="https://i.ibb.co/PtYrLNy/img1.png" alt="img1" border="0">
+          <p>Refer your friend below</p>
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col-sm-12 col-md-3">
+        <div class="share-boxes">
+          <img src="https://i.ibb.co/P5TdfkT/img2.png" alt="img2" border="0">
+          <p>You both get an exclusive offer</p>
+          <img src="https://i.ibb.co/Sr5F70S/dotted-arrow1.png" alt="dotted-arrow1" class="dotted-line">
+          <img src="https://i.ibb.co/Fqs2KxB/dotted-arrow2.png" alt="dotted-arrow2" class="dotted-line2">
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col-sm-12 col-md-3">
+        <div class="share-boxes">
+          <img src="https://i.ibb.co/StC3RWk/img3.png" alt="img3" border="0">
+          <p>Get up to 15% offer on referral</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row refer-form-sec">
+      <div class="col">
+        <div class="refer-image">
+          <img src="https://i.ibb.co/72ngXX8/big-image.jpg" alt="big-image" border="0" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="refer-form">
+          <ul>
+            <li class="facebook-color"><a href="https://www.facebook.com/profile.php?id=61565616456345">Facebook</a></li>
+            <li class="youtube-color"><a href="https://youtube.com/@jobzenter?si=UwajJL24CLyp9g_i">YouTube</a></li>
+            <li class="twitter-color"><a href="https://www.instagram.com/jobzenter_official?igsh=ZDl1dXdidDhqb25s">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="refer-form-content">
+          <h2>Friends To Friends</h2>
+          <p>Refer friends, and you both earn rewards. Share the opportunity and grow together! <a href="#">NOW!</a></p>
+          <form id="referForm" action="refer-and-earn.php" method="POST" onsubmit="submitReferForm(event)">
+              <input type="text" name="friend_name" placeholder="Your Friend's Name" required>
+              <input type="tel" name="friend_phone" placeholder="Your Friend's Phone Number" pattern="[0-9]{10}" required>
+              <p>
+                  <label class="container-checkbox">I have read and accept the Terms & Conditions and privacy policy
+                      <input type="checkbox" required>
+                      <span class="checkmark"></span>
+                  </label>
+              </p>
+              <button type="submit" class="btn btn-primary">Refer & Earn (wait for 4 seconds)</button>
+          </form>
+      </div>
+      </div>
+    </div>
+
+    <div class="row mt-30 mb-30">
+      <div class="col">
+        <div class="referal-progress">
+          <h2>YOUR REFERAL PROGRESS</h2>
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td>1. Enter the details of your friend</td>
+              </tr>
+              <tr>
+                <td>2. Now submit the details you entered</td>
+              </tr>
+              <tr>
+                <td>3. You will get a 15% offer code to use for all the courses</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<script>
+  function submitReferForm(event) {
+    event.preventDefault();
+    let formData = new FormData(document.getElementById('referForm'));
+    fetch('refer-and-earn.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Referral Sent Successfully!',
+          text: 'Your referral has been sent. Redirecting...',
+          iconColor: '#ffc107',
+          confirmButtonColor: '#ffc107',
+          timer: 4000,
+          timerProgressBar: true
+        }).then(() => {
+          Swal.fire({
+            title: 'Join our WhatsApp Group',
+            text: 'Click below to join our WhatsApp group for free updates on future services.',
+            icon: 'info',
+            confirmButtonText: 'Join WhatsApp Group',
+            confirmButtonColor: '#25D366',
+            iconColor: '#25D366'
+          }).then(() => {
+            window.open("https://chat.whatsapp.com/JBQ9NfEOqrUKvkm9kzGTjh", "_blank");
+          });
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed to Send Referral',
+          text: data.message,
+          confirmButtonColor: '#ff2120',
+          timer: 4000,
+          timerProgressBar: true
+        });
+      }
+    })
+    .catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error Occurred',
+        text: 'There was an error processing your request. Please try again.',
+        confirmButtonColor: '#ff2120',
+        timer: 4000,
+        timerProgressBar: true
+      });
+      console.error('Error:', error);
+    });
+    document.getElementById("referForm").reset();
+  }
+
+  // Hide loader after 2 seconds
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+      document.getElementById("loader").style.display = "none";
+    }, 1000);
+  });
+</script>
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
+  <div class="container py-5">
+      <div class="row g-4 footer-inner">
+          <div class="col-lg-3 col-md-6">
+              <div class="footer-item">
+                  <h4 class="text-white fw-bold mb-4">Courses</h4>
+                  <div class="d-flex flex-column align-items-start">
+                      <a class="btn btn-link ps-0" href="../courses.html"><i class="fa fa-check me-2"></i>Software Development</a>
+                      <a class="btn btn-link ps-0" href="../courses.html"><i class="fa fa-check me-2"></i>Full Stack Development</a>
+                      <a class="btn btn-link ps-0" href="../courses.html"><i class="fa fa-check me-2"></i>Business Intelligence</a>
+                      <a class="btn btn-link ps-0" href="../courses.html"><i class="fa fa-check me-2"></i>DevOps</a>
+                  </div>
+              </div>
+          </div>
+               <!-- Useful Link Section -->
+               <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+           
+  
+                    <h4 class="text-white fw-bold mb-4">Other Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <a class="btn btn-link ps-0" href="../terms.html"><i class="fa fa-check me-2"></i>Terms and Conditions</a>
+                        <a class="btn btn-link ps-0" href="../privacypolicy.html"><i class="fa fa-check me-2"></i>Privacy Policy</a>
+                        <a class="btn btn-link ps-0" href="../disclaimer.html"><i class="fa fa-check me-2"></i>Disclaimer</a>
+                        <a class="btn btn-link ps-0" href="../courses.html"><i class="fa fa-check me-2"></i>Courses We Offer</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Section 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Services Link</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <a class="btn btn-link ps-0" href="../service.html"><i class="fa fa-check me-2"></i>Resume building</a>
+                        <a class="btn btn-link ps-0" href="../service.html"><i class="fa fa-check me-2"></i>Interview Preparation</a>
+                        <a class="btn btn-link ps-0" href="../service.html"><i class="fa fa-check me-2"></i>Job Portal Access</a>
+                        <a class="btn btn-link ps-0" href="../service.html"><i class="fa fa-check me-2"></i>Career Counseling</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Us Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Contact Us</h4>
+                    <a href="../contact.html" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>110A, 2nd Floor, Poonamallee High Road,<br>
+                       Nerkundram, Koyambedu, Chennai, Tamil Nadu 600107</a>
+                    <a href="../contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>+91 9057770577</a>
+                    <a href="../contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>admin@jobzenter.in</a>
+                </div>
+            </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid bg-dark py-4">
+  <div class="container d-flex flex-column align-items-center text-white">
+      <h1 class="mb-0 display-5 text-center">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+      </h1>
+      <p class="text-center mt-2 mb-0">Copyright © Jobzenter. All rights reserved.</p>
+  </div>
+</div>
+<!-- Copyright End -->
+</body>
+</html>
