@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jobzenter provides hands-on IT training and placement support in Software Testing, Java, AWS, Power BI, and Full Stack Development. Join us to kickstart your IT career.">
+
+  <!-- Keep ONE Font Awesome (5.15.4) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Optimized Keywords -->
+  <meta name="keywords" content="jobzenter,software training, placements, IT courses, resume building, interview preparation, placement services, Python, Java, AWS, Power BI, Full Stack Development, Software Development, SQL, Business Intelligence, AWS DevOps, IT professional training, career counselling">
+  <meta name="author" content="Jobzenter">
+  <meta name="robots" content="index, follow">
+
+  <!-- Make canonical + og:url consistent (non-www) -->
+  <link rel="canonical" href="https://jobzenter.in/"/>
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Jobzenter - Software Training And Placements">
+  <meta property="og:description" content="We offer hands-on training.">
+  <meta property="og:image" content="https://jobzenter.in/img/JZ%20LOGO-02.png">
+  <meta property="og:url" content="https://jobzenter.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jobzenter">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jobzenter - Software Training And Placements">
+  <meta name="twitter:description" content="Leading training and placement institute offering IT courses">
+  <meta name="twitter:image" content="https://jobzenter.in/img/JZ%20LOGO-02.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/logo_round_-ai-brush-removebg-gawczdga.png">
+  <title>Jobzenter | IT Training, Full Stack Development, AWS, Power BI, Software Testing & 100% Placement Support</title>
+
+  <!-- SweetAlert (kept, no behavior change) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icon Font (already included above) -->
+  <!-- Removed duplicate FA 5.10.0 and FA Kit -->
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9Q04EY8H6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E9Q04EY8H6');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KBV4QZT2');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <!-- Optional: Animate.css for WOW fadeInUp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- KEEP your inline styles (unchanged) -->
+  <style>
+    .project-item {
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    .project-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .swiper { padding-bottom: 60px; }
+    .swiper-slide { display: flex; justify-content: center; }
+    .swiper-button-next, .swiper-button-prev { color: #000; }
+    .swiper-pagination-bullet-active { background-color: #007bff; }
+  </style>
+
+  <!-- Keep ONLY the big JSON-LD graph + LocalBusiness; removed the small single Course block -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "name": "Software Testing",
+        "description": "Hands-on training in manual and automation testing using Selenium, Java, TestNG, and real-time project scenarios.",
+        "provider": {"@type":"Organization","name":"Jobzenter","sameAs":"https://jobzenter.in/"},
+        "educationalCredentialAwarded": "Certificate",
+        "courseMode": ["In-person", "Online", "Hybrid"],
+        "offers": {
+          "@type": "Offer",
+          "price": "12000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jobzenter.in/software-testing"
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Power BI",
+        "description": "Practical Power BI training including DAX, data modeling, dashboard creation, and real-time project analysis.",
+        "provider": {"@type":"Organization","name":"Jobzenter","sameAs":"https://jobzenter.in/"},
+        "educationalCredentialAwarded": "Certificate",
+        "courseMode": ["In-person", "Online", "Hybrid"],
+        "offers": {
+          "@type": "Offer",
+          "price": "10000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jobzenter.in/powerbi"
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "AWS DevOps",
+        "description": "Comprehensive AWS DevOps training covering cloud infrastructure, CI/CD pipelines, Docker, Jenkins, and automation tools.",
+        "provider": {"@type":"Organization","name":"Jobzenter","sameAs":"https://jobzenter.in/"},
+        "educationalCredentialAwarded": "Certificate",
+        "courseMode": ["In-person", "Online", "Hybrid"],
+        "offers": {
+          "@type": "Offer",
+          "price": "13000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jobzenter.in/aws-devops"
+        }
+      },
+      {
+        "@type": "Course",
+        "name": "Full Stack Development",
+        "description": "End-to-end Full Stack Development training including HTML, CSS, JavaScript, React, Node.js, MongoDB, and deployment.",
+        "provider": {"@type":"Organization","name":"Jobzenter","sameAs":"https://jobzenter.in/"},
+        "educationalCredentialAwarded": "Certificate",
+        "courseMode": ["In-person", "Online", "Hybrid"],
+        "offers": {
+          "@type": "Offer",
+          "price": "15000",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jobzenter.in/fullstack"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "Jobzenter",
+        "image": "https://jobzenter.in/img/JZ%20LOGO-02.png",
+        "url": "https://jobzenter.in",
+        "telephone": "+91 90577 70577",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kamakoti Nagar",
+          "addressLocality": "Chennai",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "600053",
+          "addressCountry": "IN"
+        },
+        "geo": {"@type":"GeoCoordinates","latitude":12.941996,"longitude":80.210170},
+        "openingHours": ["Mo-Sa 09:00-21:00"],
+        "priceRange": "₹₹",
+        "description": "Jobzenter is a software training and placement centre offering hands-on IT courses in Chennai.",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61565616456345",
+          "https://www.linkedin.com/company/jobzenter/",
+          "https://www.instagram.com/jobzenter_official?igsh=ZDl1dXdidDhqb25s",
+          "https://youtube.com/@jobzenter-k8b?si=w8TSy_dXP594cUBW"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1357306715384723');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1357306715384723&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    .swiper-slide { background-color: transparent !important; }
+    .project-item, .project-item * { color: #000 !important; }
+
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) - fixed -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBV4QZT2"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Spinner Start -->
+  <div id="spinner" class="show w-100 vh-100 bg-white position-fixed top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Topbar Start -->
+  <div class="container-fluid topbar-top bg-primary">
+    <div class="container">
+      <div class="d-flex justify-content-between topbar py-2">
+        <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+          <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>Jobzenter, Pallikaranai, Chennai</a>
+          <small class="me-4 top-text"><i class="fas fa-phone-alt me-2 text-dark top-text"></i>+91 9057770577</small>
+          <a href="mailto:admin@jobzenter.in" class="text-secondary">
+            <i class="fas fa-envelope me-2 text-dark"></i>admin@jobzenter.in
+          </a>
+        </div>
+        <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+          <div class="search-form">
+            <form method="post" action="index.html">
+              <div class="form-group">
+                <div class="d-flex"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center topbar-icon">
+          <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL" class="me-4"><i class="fab fa-facebook-f text-dark" aria-label="Facebook"></i></a>
+          <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09" class="me-4"><i class="fab fa-twitter text-dark" aria-label="Twitter"></i></a>
+          <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" class="me-4"><i class="fab fa-instagram text-dark" aria-label="Instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jobzenter-offl-a61489314/" class="me-4"><i class="fab fa-linkedin-in text-dark" aria-label="LinkedIn"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+  <!-- Navbar Start (unchanged style; minor JS data attributes for better mobile UX) -->
+<style>
+  
+  /* Ensure dropdown menus are properly aligned on mobile */
+  .navbar-collapse {
+    background-color: #000;
+
+    position: relative;
+  }
+
+  /* Toggle button styling */
+  .navbar-toggler {
+    background-color: #007bff;
+  }
+
+  /* Adjust the dropdown menu on mobile */
+  .navbar-nav .dropdown-menu {
+    background-color: #000000;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+  }
+
+  .dropdown-item {
+    color: white !important;
+    padding: 10px;
+  }
+
+  .dropdown-item:hover {
+    background-color: black !important;
+    color: yellow  !important;
+  }
+
+  /* Ensure the navbar aligns properly on smaller screens */
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 14px;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: yellow !important;
+  }
+   
+   @media (max-width: 1200px) {
+    .navbar-brand h1 {
+      font-size: 2rem !important;
+    }
+     .navbar-brand h1 img {
+    height: 1.5em;
+  }
+   }
+  /* Hide the icon in mobile view */
+  @media (max-width: 768px) {
+    .dropdown-toggle i {
+      display: none; /* Hide the caret icon in small screens */
+    }
+  }
+
+  /* Keep dropdown caret visible for larger screens */
+  @media (min-width: 768px) {
+    .dropdown-toggle i {
+      display: inline-block; /* Show the caret icon only in larger screens */
+    }
+  }
+  .py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important
+}
+/* Adjust layout for mobile screens */
+@media (max-width: 768px) {
+  .row .col-6 {
+    padding: 10px;  /* Adjust padding for mobile view */
+  }
+}
+
+</style>
+
+<div class="container-fluid" style="background-color: #000000;">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+      <a href="index.html" class="navbar-brand">
+        <h1 class="mb-0">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+          <img src="img/JZ LOGO-02.png" alt="Logo" style="height: 2em; vertical-align: middle; margin-left: 1%;">
+        </h1>
+      </a>
+      <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+        <span class="fa fa-bars text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+          
+          <!-- Services Dropdown -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services 
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="bt/index.html">Bootcamps</a></li>
+              <li><a class="dropdown-item" href="bt/resumebuild.html">Resume Building</a></li>
+              <li><a class="dropdown-item" href="bt/interviewprep.html">Interview Preparation</a></li>
+              <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+              <li><a class="dropdown-item" href="careerpage.html">Career Counseling</a></li>
+            </ul>
+          </div>
+          
+          <a href="referandearn.html" class="nav-item nav-link">Refer & Earn</a>
+          <a href="contact.html" class="nav-item nav-link">Reach Us</a>
+          
+          <!-- Facts Dropdown -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="factsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Facts 
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="factsDropdown">
+              <li><a class="dropdown-item" href="quiz.html">Quiz Time</a></li>
+            </ul>
+          </div>
+          
+          <a href="../offlinebenefits/index.html" class="nav-item nav-link">Our Classroom</a>
+          <a href="blogjobz/index.html" class="nav-item nav-link">Tech Blogs</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- Navbar End -->
+
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Career Counselling</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white" aria-current="page">Career Counselling</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                    <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Career Counselling</h5>
+                    <h1 class="display-5">Let’s talk about your career growth !! </h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>1. Fill The form below and enter the details </h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>2. Now Press claim and confirm your session !!</h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>3. You will Receive a call from us and schedule your session</h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+<!-- Referral Section with Adjusted Background Start -->
+<div class="container-fluid py-5" style="background-image: url('img/careerbg5.jpg'); background-size: cover; background-position: center; padding-top: 150px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Form Section with Adjusted Semi-transparent Background -->
+            <div class="col-lg-6 p-5" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-top: 50px; margin-bottom: 20px;"> <!-- Adjusted bottom margin -->
+                <h2 class="mb-4 text-center">Confirm Your Session</h2>
+                <form id="sessionForm" onsubmit="submitSessionForm(event)">
+                    <div class="mb-3">
+                        <label for="your-name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="your-name" name="your-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-phone" class="form-label">Your Phone Number</label>
+                        <input type="tel" class="form-control" id="your-phone" name="your-phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-email" class="form-label">Your Email ID</label>
+                        <input type="email" class="form-control" id="your-email" name="your-email" placeholder="Enter your email ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-city" class="form-label">City You Are From</label>
+                        <input type="text" class="form-control" id="your-city" name="your-city" placeholder="Enter your city" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: #ffcc00; color: #333; font-weight: bold;">Claim ( wait for 5 seconds )</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Referral Section with Adjusted Background End -->
+
+
+<!-- Include SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+  function submitSessionForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    let formData = new FormData(document.getElementById('sessionForm')); // Get form data
+
+    fetch('careercounsellingsendmail.php', { // Use the correct PHP script
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Session Confirmed!',
+          text: 'Your session has been confirmed. Redirecting...',
+          iconColor: '#ffc107',
+          confirmButtonColor: '#ffc107',
+          timer: 4000,
+          timerProgressBar: true
+        }).then(() => {
+          Swal.fire({
+            title: 'Join our WhatsApp Group',
+            text: 'Click below to join our WhatsApp group for free updates and session reminders.',
+            icon: 'info',
+            confirmButtonText: 'Join WhatsApp Group',
+            confirmButtonColor: '#25D366',
+            iconColor: '#25D366'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.open("https://chat.whatsapp.com/JBQ9NfEOqrUKvkm9kzGTjh", "_blank"); // Replace 'YourUniqueGroupID' with your actual WhatsApp group link ID
+            }
+          });
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission Failed',
+          text: data.message,
+          confirmButtonColor: '#ff2120',
+          timer: 4000,
+          timerProgressBar: true
+        });
+      }
+    })
+    .catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error Occurred',
+        text: 'There was an error processing your request. Please try again.',
+        confirmButtonColor: '#ff2120',
+        timer: 4000,
+        timerProgressBar: true
+      });
+      console.error('Error:', error);
+    });
+
+    document.getElementById("sessionForm").reset(); // Reset the form after submission attempt
+  }
+</script>
+
+  <!-- Footer Start -->
+  <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
+    <div class="container py-5">
+      <div class="row g-4 footer-inner">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-white fw-bold mb-4">Courses</h4>
+            <div class="d-flex flex-column align-items-start">
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>AWS</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Software Testing</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Full Stack Development</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Business Intelligence</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>CCNA</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Medical Billing</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-white fw-bold mb-4">Other Links</h4>
+            <div class="d-flex flex-column align-items-start">
+              <a class="btn btn-link ps-0" href="terms.html"><i class="fa fa-check me-2"></i>Terms and Conditions</a>
+              <a class="btn btn-link ps-0" href="privacypolicy.html"><i class="fa fa-check me-2"></i>Privacy Policy</a>
+              <a class="btn btn-link ps-0" href="disclaimer.html"><i class="fa fa-check me-2"></i>Disclaimer</a>
+              <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Courses We Offer</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-white fw-bold mb-4">Services Link</h4>
+            <div class="d-flex flex-column align-items-start">
+              <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Resume building</a>
+              <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Interview Preparation</a>
+              <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Job Portal Access</a>
+              <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Career Counseling</a>
+              <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Bootcamps</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-item">
+            <h4 class="text-white fw-bold mb-4">Contact Us</h4>
+            <a href="contact.html" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>9/29, 5th St, Kamakoti Nagar, Pallikaranai, Chennai, Tamil Nadu 600100</a>
+            <a href="contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>+91 9057770577</a>
+            <a href="contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>admin@jobzenter.in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Copyright -->
+  <div class="container-fluid copyright bg-dark py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <!-- Replace nested h1s with a styled div to avoid SEO/semantics issues -->
+          <div class="mb-0 display-5" style="font-weight:700; font-size:2.5rem;">
+            <span style="color: yellow;">JOB</span><span style="color: rgb(255, 255, 255);">ZENTER</span>
+          </div>
+        </div>
+        <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+          <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" aria-label="Instagram"><i class="fab fa-instagram text-dark"></i></a>
+          <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.linkedin.com/in/jobzenter-offl-a61489314/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="col-md-4 my-auto text-center text-md-end text-white">
+          Copyright © Jobzenter. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/919344828514" class="whatsapp-icon" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- Scripts: keep ONE jQuery and ONE Bootstrap bundle -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Libraries -->
+  <script defer src="lib/wow/wow.min.js"></script>
+  <script defer src="lib/easing/easing.min.js"></script>
+  <script defer src="lib/waypoints/waypoints.min.js"></script>
+  <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template JS -->
+  <script defer src="js/main.js"></script>
+
+
+</body>
+</html>
