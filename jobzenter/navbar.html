@@ -1,0 +1,165 @@
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Career Counselling</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white" aria-current="page">Career Counselling</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <div class="container-fluid py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+                    <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Career Counselling</h5>
+                    <h1 class="display-5">Let’s talk about your career growth !! </h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage1.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>1. Fill The form below and enter the details </h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage2.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>2. Now Press claim and confirm your session !!</h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="blog-item">
+                            <img src="img/careerpage3.jpg" class="img-fluid w-100 rounded-top" alt="">
+                            <div class="rounded-bottom bg-light">
+                                <div class="px-4 pb-0">
+                                    <h4>3. You will Receive a call from us and schedule your session</h4>
+                                </div>
+                                <div class="p-4 py-2 d-flex justify-content-between bg-primary rounded-bottom blog-btn">
+                                    <a href="https://api.whatsapp.com/send?phone=919057770577&text=Hey%20I%20want%20to%20claim%20the%20free%20career%20counselling%20session%20now" class="btn btn-primary border-0" target="_blank">Claim Your Session Right Now !!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+<!-- Referral Section with Adjusted Background Start -->
+<div class="container-fluid py-5" style="background-image: url('img/careerbg5.jpg'); background-size: cover; background-position: center; padding-top: 150px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Form Section with Adjusted Semi-transparent Background -->
+            <div class="col-lg-6 p-5" style="background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); margin-top: 50px; margin-bottom: 20px;"> <!-- Adjusted bottom margin -->
+                <h2 class="mb-4 text-center">Confirm Your Session</h2>
+                <form id="sessionForm" onsubmit="submitSessionForm(event)">
+                    <div class="mb-3">
+                        <label for="your-name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="your-name" name="your-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-phone" class="form-label">Your Phone Number</label>
+                        <input type="tel" class="form-control" id="your-phone" name="your-phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-email" class="form-label">Your Email ID</label>
+                        <input type="email" class="form-control" id="your-email" name="your-email" placeholder="Enter your email ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="your-city" class="form-label">City You Are From</label>
+                        <input type="text" class="form-control" id="your-city" name="your-city" placeholder="Enter your city" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: #ffcc00; color: #333; font-weight: bold;">Claim ( wait for 5 seconds )</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Referral Section with Adjusted Background End -->
+
+
+<!-- Include SweetAlert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+  function submitSessionForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    let formData = new FormData(document.getElementById('sessionForm')); // Get form data
+
+    fetch('careercounsellingsendmail.php', { // Use the correct PHP script
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Session Confirmed!',
+          text: 'Your session has been confirmed. Redirecting...',
+          iconColor: '#ffc107',
+          confirmButtonColor: '#ffc107',
+          timer: 4000,
+          timerProgressBar: true
+        }).then(() => {
+          Swal.fire({
+            title: 'Join our WhatsApp Group',
+            text: 'Click below to join our WhatsApp group for free updates and session reminders.',
+            icon: 'info',
+            confirmButtonText: 'Join WhatsApp Group',
+            confirmButtonColor: '#25D366',
+            iconColor: '#25D366'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.open("https://chat.whatsapp.com/JBQ9NfEOqrUKvkm9kzGTjh", "_blank"); // Replace 'YourUniqueGroupID' with your actual WhatsApp group link ID
+            }
+          });
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission Failed',
+          text: data.message,
+          confirmButtonColor: '#ff2120',
+          timer: 4000,
+          timerProgressBar: true
+        });
+      }
+    })
+    .catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error Occurred',
+        text: 'There was an error processing your request. Please try again.',
+        confirmButtonColor: '#ff2120',
+        timer: 4000,
+        timerProgressBar: true
+      });
+      console.error('Error:', error);
+    });
+
+    document.getElementById("sessionForm").reset(); // Reset the form after submission attempt
+  }
+</script>

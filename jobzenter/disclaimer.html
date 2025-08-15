@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="img/logo_round_-ai-brush-removebg-gawczdga.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - JOBZENTER</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+  /* ===== Topbar (yellow strip) ===== */
+.topbar-top {
+  background: #ffd900 !important;     /* brand yellow */
+}
+
+/* Row height + vertical centering */
+.topbar {
+  min-height: 48px;
+  align-items: center;
+}
+
+/* Left: address / phone / email */
+.topbar-info a,
+.topbar-info small {
+  font-size: 1rem;                     /* matches screenshot scale */
+  line-height: 1.2;
+  color: #555 !important;              /* dark text on yellow */
+  text-decoration: none;
+}
+
+.topbar-info a:hover,
+.topbar-info a:focus {
+  color: #111 !important;
+  text-decoration: underline;
+}
+
+/* Phone looks lighter (like screenshot) */
+.top-text {
+  color: rgba(0,0,0,.45) !important;
+  letter-spacing: .2px;
+}
+
+/* Left icons (map / phone / mail) – solid black */
+.topbar-info i {
+  color: #000 !important;
+}
+
+/* Spacing on the left group */
+.topbar-info > * { margin-right: 1.25rem; }
+.topbar-info > *:last-child { margin-right: 0; }
+
+/* Middle vertical divider before socials */
+.search-btn {
+  border-color: rgba(0,0,0,.45) !important;
+}
+
+/* Right: social icons */
+.topbar-icon i {
+  font-size: 1.05rem;                  /* neat size */
+  color: #000 !important;              /* visible on yellow */
+  transition: transform .15s ease;
+}
+.topbar-icon a { margin-right: 1.25rem; }
+.topbar-icon a:last-child { margin-right: 0; }
+.topbar-icon a:hover i,
+.topbar-icon a:focus i { transform: translateY(-1px); }
+
+/* Accessibility: visible focus on yellow */
+.topbar a:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+  /* ===== Responsive tweaks ===== */
+@media (max-width: 992px) {            /* stack nicely on tablets/phones */
+  .topbar {
+    flex-wrap: wrap;
+    gap: .5rem 0;
+  }
+  .topbar-info {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .search-btn {                        /* hide empty center column */
+    display: none !important;
+  }
+  .topbar-icon {
+    flex: 1 1 100%;
+    justify-content: center;
+    
+    border: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 420px) {            /* prevent overflow on very small phones */
+  .topbar-info a,
+  .topbar-info small {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* Show topbar on desktops only */
+@media (max-width: 991.98px) {       /* Bootstrap “lg” breakpoint */
+  .topbar-top {
+    display: none !important;        /* hide on phones + tablets */
+  }
+}
+
+/* Remove the Bootstrap right border and draw our own full-height rule */
+.search-btn {
+  position: relative;
+  border-right: 0 !important;
+}
+/*.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 2px;
+  background: rgba(0,0,0,.55);                /* same tone as screenshot 
+}
+/* --- Fix the divider pseudo element --- */
+/*.search-btn::after {
+  right: 0;                 /* was empty -> makes the line flush right 
+  width: 2px;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,.55);
+}*/
+
+/* --- Space between the icon and its label text (left group) --- */
+.topbar-info a i,
+.topbar-info small i {
+  /* use logical property so it works LTR/RTL */
+  margin-inline-end: 0.6rem !important;   /* increase if you want more space */
+  vertical-align: middle;                 /* keeps icon aligned with text */
+  line-height: 1;
+}
+
+/* Optional: consistent gap between the three left items */
+.topbar-info > * {
+  margin-right: 2rem;                  /* tweak as needed */
+}
+.topbar-info > *:last-child { margin-right: 0; }
+/* Blink both icon + number together every 2s */
+/* FAST hard blink: fully off/on, no fade */
+.phone-blink {
+  animation: jz-blink-hard 1s steps(1, end) infinite; /* 0.6s cycle = 0.3s on, 0.3s off */
+  will-change: opacity;
+}
+
+@keyframes jz-blink-hard {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .phone-blink { animation: none; }
+}
+
+
+</style>
+  <div class="container-fluid topbar-top bg-primary">
+    <div class="container">
+      <div class="d-flex justify-content-between topbar py-2">
+        <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+          <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>Jobzenter, Pallikaranai, Chennai</a>
+          <small class="me-4 top-text phone-blink" style="font-size: 18px; color: #000 !important; font-weight:400;">
+            <i class="fas fa-phone-alt me-2 text-dark top-text"></i>
+            +91 9057770577
+          </small>
+
+
+          <a href="mailto:admin@jobzenter.in" class="text-secondary">
+            <i class="fas fa-envelope me-2 text-dark"></i>admin@jobzenter.in
+          </a>
+        </div>
+        <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+          <div class="search-form">
+            <form method="post" action="index.html">
+              <div class="form-group">
+                <div class="d-flex"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center topbar-icon">
+          <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL" class="me-4"><i class="fab fa-facebook-f text-dark" aria-label="Facebook"></i></a>
+          <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09" class="me-4"><i class="fab fa-twitter text-dark" aria-label="Twitter"></i></a>
+          <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" class="me-4"><i class="fab fa-instagram text-dark" aria-label="Instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jobzenter-offl-a61489314/" class="me-4"><i class="fab fa-linkedin-in text-dark" aria-label="LinkedIn"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Navbar Start -->
+<div class="container-fluid" style="background-color: #000000;">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+      <a href="index.html" class="navbar-brand">
+        <h1 class="mb-0 display-5">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+          <img src="img/JZ LOGO-02.png" alt="Logo" style="height: 2em; vertical-align: middle; margin-left: 1%;">
+        </h1>
+      </a>
+      <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+
+          <!-- Dropdown: Services -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Services <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="bt/index.html">Bootcamps</a></li>
+              <li><a class="dropdown-item" href="bt/resumebuild.html">Resume Building</a></li>
+              <li><a class="dropdown-item" href="bt/interviewprep.html">Interview Preparation</a></li>
+              <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+              <li><a class="dropdown-item" href="careerpage.html">Career Counseling</a></li>
+            </ul>
+          </div>
+
+          <a href="referandearn.html" class="nav-item nav-link">Refer & Earn</a>
+          <a href="contact.html" class="nav-item nav-link">Reach Us</a>
+
+          <!-- Dropdown: Facts -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="factsDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Facts <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="factsDropdown">
+              <li><a class="dropdown-item" href="quiz.html">Quiz Time</a></li>
+            </ul>
+          </div>
+
+          <a href="../offlinebenefits/index.html" class="nav-item nav-link">Our Classroom</a>
+          <a href="blogjobz/index.html" class="nav-item nav-link">Tech Blogs</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- ===== Updated Navbar End ===== -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome for the dropdown icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Custom Navbar Styling -->
+<style>
+ 
+    
+  .navbar, .navbar-dark {
+    background-color: #000000 !important;
+  }
+
+  .navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff !important;
+  }
+
+  .navbar-nav .nav-link::after {
+    content:none;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+  }
+  .dropdown-item{
+    text-decoration: none !important;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    visibility: hidden;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: yellow !important;
+    text-decoration: underline;
+  }
+
+  .navbar-brand {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .dropdown-menu {
+    background-color: #000000;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000000;
+    color: yellow;
+    text-decoration: underline !important;
+  }
+
+  .fa-caret-down {
+    margin-left: 5px;
+  }
+  @media (max-width: 991.98px) {
+  .navbar .dropdown,
+  .navbar .dropdown-menu {
+    position: static !important;
+  }
+  .navbar .dropdown-menu {
+    float: none; /* ensures it stacks inside the collapse */
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand h1 {
+    font-size: 1.5rem !important;
+  }
+  .navbar-brand h1 img {
+    height: 1.5em !important;
+  }
+}
+</style>
+<!-- Navbar End -->
+
+<!-- JavaScript to handle active link highlighting -->
+<script>
+    // Get the current URL path
+    const currentPath = window.location.pathname;
+
+    // Function to mark the active link
+    function setActiveLink() {
+        const navItems = document.querySelectorAll('.navbar-nav .nav-link');
+        navItems.forEach((item) => {
+            // Check if the href of the link matches the current page path
+            if (item.getAttribute('href') === currentPath || (currentPath === "/" && item.getAttribute('href') === "index.html")) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    // Run the function to set the active link
+    setActiveLink();
+</script>
+
+
+
+<!-- navbar end  -->
+    
+
+    <header>
+        <h1>Disclaimer</h1>
+    </header>
+    <main>
+        <section id="disclaimer">
+            <h2>Disclaimer</h2>
+            <p>The information provided by JOBZENTER on our website is for general informational purposes only. While we strive to provide accurate and up-to-date information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+            
+            <p>Through our website, you may be able to link to other websites which are not under the control of JOBZENTER. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+            
+            <p>JOBZENTER will not be liable for any false, inaccurate, inappropriate, or incomplete information presented on the website. In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+            
+            <p>Every effort is made to keep the website up and running smoothly. However, JOBZENTER takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+        </section>
+    </main>
+
+<br>
+<br>
+
+    <footer style="position: static;">
+        <p>&copy; 2025 JOBZENTER. All Rights Reserved.</p>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

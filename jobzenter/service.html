@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="img/logo_round_-ai-brush-removebg-gawczdga.png">
+        <title>Jobzenter - Software Training And Placements</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar-top bg-primary">
+            <div class="container">
+                <div class="d-flex justify-content-between topbar py-2">
+                    <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+                        <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>Jobzenter, Pallikaranai, chennai</a>
+                        <small class="me-4 top-text"><i class="fas fa-phone-alt me-2 text-dark top-text"></i>+91 9057770577</small>
+                        <a href="#" class="text-secondary"><i class="fas fa-envelope me-2 text-dark"></i>admin@jobzenter.in</a>
+                    </div>
+                    <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+                        <div class="search-form">
+                            <form method="post" action="index.html">
+                                <div class="form-group">
+                                    <div class="d-flex">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center topbar-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL" class="me-4"><i class="fab fa-facebook-f text-dark"></i></a>
+                        <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09" class="me-4"><i class="fab fa-twitter text-dark"></i></a>
+                        <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" class="me-4"><i class="fab fa-instagram text-dark"></i></a>
+                        <a href="https://www.linkedin.com/in/jobzenter-offl-a61489314/" class="me-4"><i class="fab fa-linkedin-in text-dark"></i></a>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<style>
+  
+  /* Ensure dropdown menus are properly aligned on mobile */
+  .navbar-collapse {
+    background-color: #000;
+
+    position: relative;
+  }
+
+  /* Toggle button styling */
+  .navbar-toggler {
+    background-color: #007bff;
+  }
+
+  /* Adjust the dropdown menu on mobile */
+  .navbar-nav .dropdown-menu {
+    background-color: #000000;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9999;
+  }
+
+  .dropdown-item {
+    color: white !important;
+    padding: 10px;
+  }
+
+  .dropdown-item:hover {
+    background-color: black !important;
+    color: yellow  !important;
+  }
+
+  /* Ensure the navbar aligns properly on smaller screens */
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 14px;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: yellow !important;
+  }
+   
+   @media (max-width: 1200px) {
+    .navbar-brand h1 {
+      font-size: 2rem !important;
+    }
+     .navbar-brand h1 img {
+    height: 1.5em;
+  }
+   }
+  /* Hide the icon in mobile view */
+  @media (max-width: 768px) {
+    .dropdown-toggle i {
+      display: none; /* Hide the caret icon in small screens */
+    }
+  }
+
+  /* Keep dropdown caret visible for larger screens */
+  @media (min-width: 768px) {
+    .dropdown-toggle i {
+      display: inline-block; /* Show the caret icon only in larger screens */
+    }
+  }
+  .py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important
+}
+/* Adjust layout for mobile screens */
+@media (max-width: 768px) {
+  .row .col-6 {
+    padding: 10px;  /* Adjust padding for mobile view */
+  }
+}
+
+</style>
+
+<div class="container-fluid" style="background-color: #000000;">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+      <a href="index.html" class="navbar-brand">
+        <h1 class="mb-0">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+          <img src="img/JZ LOGO-02.png" alt="Logo" style="height: 2em; vertical-align: middle; margin-left: 1%;">
+        </h1>
+      </a>
+      <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+        <span class="fa fa-bars text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="courses.html" class="nav-item nav-link">Courses</a>
+          
+          <!-- Services Dropdown -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services 
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="bt/index.html">Bootcamps</a></li>
+              <li><a class="dropdown-item" href="bt/resumebuild.html">Resume Building</a></li>
+              <li><a class="dropdown-item" href="bt/interviewprep.html">Interview Preparation</a></li>
+              <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+              <li><a class="dropdown-item" href="careerpage.html">Career Counseling</a></li>
+            </ul>
+          </div>
+          
+          <a href="referandearn.html" class="nav-item nav-link">Refer & Earn</a>
+          <a href="contact.html" class="nav-item nav-link">Reach Us</a>
+          
+          <!-- Facts Dropdown -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="factsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Facts 
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="factsDropdown">
+              <li><a class="dropdown-item" href="quiz.html">Quiz Time</a></li>
+            </ul>
+          </div>
+          
+          <a href="../offlinebenefits/index.html" class="nav-item nav-link">Our Classroom</a>
+          <a href="blogjobz/index.html" class="nav-item nav-link">Tech Blogs</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- ===== Updated Navbar End ===== -->
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome for the dropdown icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- CSS for styling -->
+
+<!-- navbar final end  -->
+
+
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Services</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0 animated slideInDown">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item text-white" aria-current="page">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End -->
+   
+<!-- Services Start -->
+
+<div class="container-fluid services py-5">
+    <div class="container text-center py-5">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">our services</h5>
+            <h1 class="display-5">Services We Offer</h1>
+        </div>
+        <div class="row g-5">
+            <a href="service.html" class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".3s" style="text-decoration:none;">
+                <div class="bg-light rounded p-5 services-item">
+                    <div class="d-flex" style="align-items: center; justify-content: center;">
+                        <div class="mb-4 rounded-circle services-inner-icon">
+                            <i class="fas fa-laptop-code fa-4x" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <h4 style="color: black;">Resume Building</h4>
+                    <p class="fs-5" style="color: black;">Craft a standout resume that captures your skills and impresses the recruiters and get easily hired</p>
+                </div>
+            </a>
+            <a href="interviewprep.html" class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".5s" style="text-decoration:none;">
+                <div class="bg-light rounded p-5 services-item">
+                    <div class="d-flex" style="align-items: center; justify-content: center;">
+                        <div class="mb-4 rounded-circle services-inner-icon">
+                            <i class="fas fa-laptop-code fa-4x" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-center" style="color: black;">Interview Preparation</h4>
+                    <p class="text-center fs-5" style="color: black;">Ace your interviews with expert guidance and mock sessions tailored to your career goals</p>
+                </div>
+            </a>
+            <a href="https://urbancode.in/jobs" class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s" style="text-decoration:none;">
+                <div class="bg-light rounded p-5 services-item">
+                    <div class="d-flex" style="align-items: center; justify-content: center;">
+                        <div class="mb-4 rounded-circle services-inner-icon">
+                            <i class="fas fa-laptop-code fa-4x" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-center" style="color: black;">Job Portal Access</h4>
+                    <p class="text-center fs-5" style="color: black;">Gain exclusive access to top job opportunities through our dedicated job portal</p>
+                </div>
+            </a>
+            <a href="service.html" class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".9s" style="text-decoration:none;">
+                <div class="bg-light rounded p-5 services-item">
+                    <div class="d-flex" style="align-items: center; justify-content: center;">
+                        <div class="mb-4 rounded-circle services-inner-icon">
+                            <i class="fas fa-laptop-code fa-4x" style="color: yellow;"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-center" style="color: black;">Career Counseling</h4>
+                    <p class="text-center fs-5" style="color: black;">Make your career path with perfect counseling that aligns with your aspirations</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Services End -->
+
+ <!-- Testimonial Start -->
+ <div class="container-fluid testimonial py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
+            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Testimonial</h5>
+            <h1 class="display-5 w-50 mx-auto">What Clients Say About Our Services</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay=".5s">
+            <div class="testimonial-item">
+                <div class="testimonial-content rounded mb-4 p-4">
+                    <p class="fs-5 m-0">I came to Jobzenter with no prior IT experience and left with a wealth of knowledge and a job offer, The instructors were supportive and the learning environment was top-notch</p>
+                </div>
+                <div class="d-flex align-items-center  mb-4" style="padding: 0 0 0 25px;">
+                    <div class="position-relative">
+                        <img src="img/yellow testi.jpg" class="img-fluid rounded-circle py-2" alt="">
+                        <div class="position-absolute" style="top: 33px; left: -25px;">
+                            <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h4 class="mb-0">Varshini</h4>
+                        <p class="mb-1">Junior Web Developer</p>
+                        <div class="d-flex">
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content rounded mb-4 p-4">
+                    <p class="fs-5 m-0">Jobzenter transformed my career. The training was thorough, and the placement support was exceptional. I secured a job within a month of completing the course, iam very happy for that !!</p>
+                </div>
+                <div class="d-flex align-items-center  mb-4" style="padding: 0 0 0 25px;">
+                    <div class="position-relative">
+                        <img src="img/yellow testi.jpg" class="img-fluid rounded-circle py-2" alt="">
+                        <div class="position-absolute" style="top: 33px; left: -25px;">
+                            <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h4 class="mb-0">Krithika</h4>
+                        <p class="mb-1">IT Consultant</p>
+                        <div class="d-flex">
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content rounded mb-4 p-4">
+                    <p class="fs-5 m-0">The moment I joined jobzenter I knew I was in good hands. They helped me to develop my skills. Their placement program is excellent, it's how I found my current job!</p>
+                </div>
+                <div class="d-flex align-items-center  mb-4" style="padding: 0 0 0 25px;">
+                    <div class="position-relative">
+                        <img src="img/yellow testi.jpg" class="img-fluid rounded-circle py-2" alt="">
+                        <div class="position-absolute" style="top: 33px; left: -25px;">
+                            <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h4 class="mb-0">Joseph</h4>
+                        <p class="mb-1">System Analyst</p>
+                        <div class="d-flex">
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="testimonial-item">
+                <div class="testimonial-content rounded mb-4 p-4">
+                    <p class="fs-5 m-0">The instructors at Jobzenter are industry experts who provide practical insights and hands-on experience. I highly recommend their Full Stack Development course.</p>
+                </div>
+                <div class="d-flex align-items-center  mb-4" style="padding: 0 0 0 25px;">
+                    <div class="position-relative">
+                        <img src="img/yellow testi.jpg" class="img-fluid rounded-circle py-2" alt="">
+                        <div class="position-absolute" style="top: 33px; left: -25px;">
+                            <i class="fa fa-quote-left rounded-pill bg-primary text-dark p-3"></i>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <h4 class="mb-0">Kumar</h4>
+                        <p class="mb-1">Software Developer</p> -->
+                        <!-- <div class="d-flex"> -->
+                            <!-- <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small>
+                            <small class="fas fa-star text-primary me-1"></small> -->
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testiminial End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay=".3s">
+    <div class="container py-5">
+        <div class="row g-4 footer-inner">
+            <!-- Services Section 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Courses</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>AWS</a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Software Testing</a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Full Stack Development</a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Business Intelligence</a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Cisco Certificed Network Associate </a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Medical Billing</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Useful Link Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Other Links</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <a class="btn btn-link ps-0" href="terms.html"><i class="fa fa-check me-2"></i>Terms and Conditions</a>
+                        <a class="btn btn-link ps-0" href="privacypolicy.html"><i class="fa fa-check me-2"></i>Privacy Policy</a>
+                        <a class="btn btn-link ps-0" href="disclaimer.html"><i class="fa fa-check me-2"></i>Disclaimer</a>
+                        <a class="btn btn-link ps-0" href="courses.html"><i class="fa fa-check me-2"></i>Courses We Offer</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Section 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Services Link</h4>
+                    <div class="d-flex flex-column align-items-start">
+                        <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Resume building</a>
+                        <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Interview Preparation</a>
+                        <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Job Portal Access</a>
+                        <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Career Counseling</a>
+                        <a class="btn btn-link ps-0" href="service.html"><i class="fa fa-check me-2"></i>Bootcamps</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Us Section -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-item">
+                    <h4 class="text-white fw-bold mb-4">Contact Us</h4>
+                    <a href="contact.html" class="btn btn-link w-100 text-start ps-0 pb-3 border-bottom rounded-0"><i class="fa fa-map-marker-alt me-3"></i>9/29, 5th St, Kamakoti Nagar, Pallikaranai, Chennai, Tamil Nadu 600100</a>
+                    <a href="contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-phone-alt me-3"></i>+91 9057770577</a>
+                    <a href="contact.html" class="btn btn-link w-100 text-start ps-0 py-3 border-bottom rounded-0"><i class="fa fa-envelope me-3"></i>admin@jobzenter.in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                                        <h1 class="mb-0 display-5">
+                                            <h1 class="mb-0 display-5">
+                                                <span style="color: yellow;">JOB</span><span style="color: rgb(255, 255, 255);">ZENTER</span>
+                                            </h1>
+                                            </h1>
+                                         </div>
+                    <div class="col-md-4 copyright-btn text-center text-md-start mb-3 mb-md-0 flex-shrink-0">
+                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp"><i class="fab fa-instagram text-dark"></i></a>
+                        <a class="btn btn-primary rounded-circle me-3 copyright-icon" href="https://www.linkedin.com/in/jobzenter-offl-a61489314/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-md-4 my-auto text-center text-md-end text-white">
+                       <a class="border-bottom" href=""></a>Copyright © Jobzenter. All rights reserved. <a class="border-bottom" href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>    
+
+
+
+

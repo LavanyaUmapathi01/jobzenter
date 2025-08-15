@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/logo_round_-ai-brush-removebg-gawczdga.png">
+    <title>Quiz Time Jobzenter - Software Training And Placements</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body id="quiz-body">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <div class="quiz-container hidden" id="quiz-container">
+        <!-- Landing Page Form -->
+        <div id="landing-page">
+            <h2 class="quiz-title">Fill out the form, submit it, and wait for 5 seconds for the quiz to generate.</h2>
+            <h3>Student Details</h3>
+            <form id="quizForm">
+                <input type="text" name="name" placeholder="Name Here" required>
+                <input type="email" name="email" placeholder="Email Here" required>
+                <input type="text" name="phone" placeholder="Mobile Number (10 digits)" required>
+                <input type="text" name="state" placeholder="State Here" required>
+                <button type="submit">Submit ( wait for 5 seconds )</button>
+            </form>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="hidden">
+            <h2 class="quiz-title">Simple Quiz</h2>
+            <div id="question-container">
+                <p id="question"></p>
+                <div id="options-container">
+                    <button class="option" onclick="selectOption(0)"></button>
+                    <button class="option" onclick="selectOption(1)"></button>
+                    <button class="option" onclick="selectOption(2)"></button>
+                    <button class="option" onclick="selectOption(3)"></button>
+                </div>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+                <button id="submit-btn" onclick="submitQuiz()">Submit</button>
+            </div>
+            <div id="result-container" class="hidden">
+                <p id="result"></p>
+                <button onclick="finishQuiz()">Finish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

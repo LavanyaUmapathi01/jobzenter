@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="img/logo_round_-ai-brush-removebg-gawczdga.png">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Include SweetAlert -->
+  <style>
+    body {
+      background: url('img/landingquiz.jpg') no-repeat center center fixed; /* Replace with your image URL */
+      background-size: cover;
+      color: yellow;
+      font-family: Arial, sans-serif;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 150px auto; /* Increased margin-top to create gap from logo */
+      padding: 20px;
+      border: 2px solid yellow;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+      text-align: center;
+    }
+    .login-container h1 {
+      margin-bottom: 20px;
+    }
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid yellow;
+      border-radius: 5px;
+      background-color: black;
+      color: yellow;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .login-container button:hover {
+      background-color: darkyellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Job Support</h1>
+    <form id="jobSupportForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="jobsupport.js"></script>
+</body>
+</html>
