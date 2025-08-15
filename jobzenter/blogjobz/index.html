@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jobzenter - Software Training And Placements</title>
+
+  <!--Meta For No Index-->
+  <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+  <!-- Meta Description -->
+<meta name="description" content="Explore the latest trends and insights in technology, software development, AI, data science, web development, and more. Stay updated with our in-depth articles and coding tutorials to enhance your career in tech.">
+
+<!-- Meta Keywords -->
+<meta name="keywords" content="Technology Blog, Software Development, Business Intelligence, Full Stack Development, Data Science, Artificial Intelligence, Machine Learning, Cybersecurity, Software Testing, Web Development, Cloud Computing, Blockchain, Coding Tutorials, Programming Languages, Tech Careers, IT Industry Trends">
+
+<!-- Meta Author -->
+<meta name="author" content="Jobzenter - Software Training And Placements">
+<link rel="shortcut icon" type="image/png" href="images/logo_round_-ai-brush-removebg-gawczdga - Copy.png">
+
+<!-- Open Graph Meta Tags (for social media sharing) -->
+<meta property="og:title" content="Jobzenter Technology Blog | Stay Updated on the Latest Trends">
+<meta property="og:description" content="Read articles on AI, Machine Learning, Full Stack Development, Cloud Computing, and more. Boost your tech career with valuable insights and tutorials.">
+<meta property="og:image" content="https://yourwebsite.com/images/tech-blog-cover.jpg">
+<meta property="og:url" content="https://yourwebsite.com/blog">
+<meta property="og:type" content="website">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jobzenter Technology Blog">
+<meta name="twitter:description" content="Learn about the latest tech trends, from AI to Full Stack Development. Stay ahead in your career with our insightful blogs.">
+<meta name="twitter:image" content="https://yourwebsite.com/images/tech-blog-cover.jpg">
+
+
+  <!-- Mobile Responsive Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Theme Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" /> -->
+
+  <!-- FontAwesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- SweetAlert2 CSS & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+  <!-- Topbar Start -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+  /* ===== Topbar (yellow strip) ===== */
+.topbar-top {
+  background: #ffd900 !important;     /* brand yellow */
+}
+
+/* Row height + vertical centering */
+.topbar {
+  min-height: 48px;
+  align-items: center;
+}
+
+/* Left: address / phone / email */
+.topbar-info a,
+.topbar-info small {
+  font-size: 1rem;                     /* matches screenshot scale */
+  line-height: 1.2;
+  color: #555 !important;              /* dark text on yellow */
+  text-decoration: none;
+}
+
+.topbar-info a:hover,
+.topbar-info a:focus {
+  color: #111 !important;
+  text-decoration: underline;
+}
+
+/* Phone looks lighter (like screenshot) */
+.top-text {
+  color: rgba(0,0,0,.45) !important;
+  letter-spacing: .2px;
+}
+
+/* Left icons (map / phone / mail) – solid black */
+.topbar-info i {
+  color: #000 !important;
+}
+
+/* Spacing on the left group */
+.topbar-info > * { margin-right: 1.25rem; }
+.topbar-info > *:last-child { margin-right: 0; }
+
+/* Middle vertical divider before socials */
+.search-btn {
+  border-color: rgba(0,0,0,.45) !important;
+}
+
+/* Right: social icons */
+.topbar-icon i {
+  font-size: 1.05rem;                  /* neat size */
+  color: #000 !important;              /* visible on yellow */
+  transition: transform .15s ease;
+}
+.topbar-icon a { margin-right: 1.25rem; }
+.topbar-icon a:last-child { margin-right: 0; }
+.topbar-icon a:hover i,
+.topbar-icon a:focus i { transform: translateY(-1px); }
+
+/* Accessibility: visible focus on yellow */
+.topbar a:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+  /* ===== Responsive tweaks ===== */
+@media (max-width: 992px) {            /* stack nicely on tablets/phones */
+  .topbar {
+    flex-wrap: wrap;
+    gap: .5rem 0;
+  }
+  .topbar-info {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .search-btn {                        /* hide empty center column */
+    display: none !important;
+  }
+  .topbar-icon {
+    flex: 1 1 100%;
+    justify-content: center;
+    
+    border: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 420px) {            /* prevent overflow on very small phones */
+  .topbar-info a,
+  .topbar-info small {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/* Show topbar on desktops only */
+@media (max-width: 991.98px) {       /* Bootstrap “lg” breakpoint */
+  .topbar-top {
+    display: none !important;        /* hide on phones + tablets */
+  }
+}
+
+/* Remove the Bootstrap right border and draw our own full-height rule */
+.search-btn {
+  position: relative;
+  border-right: 0 !important;
+}
+/*.search-btn::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 2px;
+  background: rgba(0,0,0,.55);                /* same tone as screenshot 
+}
+/* --- Fix the divider pseudo element --- */
+/*.search-btn::after {
+  right: 0;                 /* was empty -> makes the line flush right 
+  width: 2px;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,.55);
+}*/
+
+/* --- Space between the icon and its label text (left group) --- */
+.topbar-info a i,
+.topbar-info small i {
+  /* use logical property so it works LTR/RTL */
+  margin-inline-end: 0.6rem !important;   /* increase if you want more space */
+  vertical-align: middle;                 /* keeps icon aligned with text */
+  line-height: 1;
+}
+
+/* Optional: consistent gap between the three left items */
+.topbar-info > * {
+  margin-right: 2rem;                  /* tweak as needed */
+}
+.topbar-info > *:last-child { margin-right: 0; }
+/* Blink both icon + number together every 2s */
+/* FAST hard blink: fully off/on, no fade */
+.phone-blink {
+  animation: jz-blink-hard 1s steps(1, end) infinite; /* 0.6s cycle = 0.3s on, 0.3s off */
+  will-change: opacity;
+}
+
+@keyframes jz-blink-hard {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .phone-blink { animation: none; }
+}
+
+
+</style>
+  <div class="container-fluid topbar-top bg-primary">
+    <div class="container">
+      <div class="d-flex justify-content-between topbar py-2">
+        <div class="d-flex align-items-center flex-shrink-0 topbar-info">
+          <a href="#" class="me-4 text-secondary"><i class="fas fa-map-marker-alt me-2 text-dark"></i>Jobzenter, Pallikaranai, Chennai</a>
+          <small class="me-4 top-text phone-blink" style="font-size: 18px; color: #000 !important; font-weight:400;">
+            <i class="fas fa-phone-alt me-2 text-dark top-text"></i>
+            +91 9057770577
+          </small>
+
+
+          <a href="mailto:admin@jobzenter.in" class="text-secondary">
+            <i class="fas fa-envelope me-2 text-dark"></i>admin@jobzenter.in
+          </a>
+        </div>
+        <div class="text-end pe-4 me-4 border-end border-dark search-btn">
+          <div class="search-form">
+            <form method="post" action="index.html">
+              <div class="form-group">
+                <div class="d-flex"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center topbar-icon">
+          <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL" class="me-4"><i class="fab fa-facebook-f text-dark" aria-label="Facebook"></i></a>
+          <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09" class="me-4"><i class="fab fa-twitter text-dark" aria-label="Twitter"></i></a>
+          <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp" class="me-4"><i class="fab fa-instagram text-dark" aria-label="Instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jobzenter-offl-a61489314/" class="me-4"><i class="fab fa-linkedin-in text-dark" aria-label="LinkedIn"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid" style="background-color: #000000;">
+  <div class="container">
+    <nav class="navbar navbar-dark navbar-expand-lg py-lg-0" >
+      <a href="index.html" class="navbar-brand">
+        <h1 class="mb-0 display-5">
+          <span style="color: yellow;">JOB</span><span style="color: white;">ZENTER</span>
+          <img src="../img/JZ LOGO-02.png" alt="Logo" style="height: 1.6em; vertical-align: middle; margin-right: 40px !important; margin-left: 1%;">
+        </h1>
+      </a>
+      <button style="background-color: #000000 !important;" class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars text-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse me-n3" id="navbarCollapse" >
+        <div class="navbar-nav me-auto">
+          <a href="../index.html" class="nav-item nav-link">Home</a>
+          <a href="../courses.html" class="nav-item nav-link">Courses</a>
+
+          <!-- Dropdown: Services -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Services <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="../bt/index.html">Bootcamps</a></li>
+              <li><a class="dropdown-item" href="resumebuild.html">Resume Building</a></li>
+              <li><a class="dropdown-item" href="interviewprep.html">Interview Preparation</a></li>
+              <li><a class="dropdown-item" href="https://urbancode.in/jobs">Job Portal Access</a></li>
+              <li><a class="dropdown-item" href="../careerpage.html">Career Counseling</a></li>
+            </ul>
+          </div>
+
+          <a href="../referandearn.html" class="nav-item nav-link">Refer & Earn</a>
+          <a href="../contact.html" class="nav-item nav-link">Reach Us</a>
+
+          <!-- Dropdown: Facts -->
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="factsDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Facts <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="factsDropdown">
+              <li><a class="dropdown-item" href="../quiz.html">Quiz Time</a></li>
+            </ul>
+          </div>
+
+          <a href="../offlinebenefits/index.html" class="nav-item nav-link">Our Classroom</a>
+          <a href="../blogjobz/index.html" class="nav-item nav-link">Tech Blogs</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- ===== Updated Navbar End ===== -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome for the dropdown icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start !important; /* aligns everything left */
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-toggle {
+    width: 100%;  /* make links span full width */
+    text-align: left !important; /* text left aligned */
+    padding-left: 1rem; /* optional padding */
+  }
+
+  /* Ensure dropdown menu also aligns left */
+  .navbar-nav .dropdown-menu {
+    text-align: left;
+  }
+}
+
+.navbar, .navbar-dark {
+  background-color: #000000 !important;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+/* Remove hover effect */
+.navbar-nav .nav-link:hover::after {
+  visibility: hidden;
+  width: 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: yellow !important;  /* Remove yellow hover color */
+  text-decoration: underline;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: yellow;
+}
+
+.dropdown-menu {
+  background-color: #000000;
+  border: none;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: #000000;
+  color: yellow;
+  text-decoration: underline;
+}
+
+.fa-caret-down {
+  margin-left: 5px;
+
+  
+}
+
+@media (max-width: 991.98px) {
+  .navbar .dropdown,
+  .navbar .dropdown-menu {
+    position: static !important;
+  }
+  .navbar .dropdown-menu {
+    float: none; /* ensures it stacks inside the collapse */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand h1 {
+    font-size: 1.5rem !important;
+  }
+  .navbar-brand h1 img {
+    height: 1.5em !important;
+  }
+}
+</style>
+
+
+
+<!-- Below Navbar Section Codes -->
+
+<section class="featured">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <article class="featured-post">
+          <div class="featured-post-content" style="margin-bottom: -10px;"> <!-- Move text upwards -->
+            <a href="single-blog.html" class="featured-post-title">
+              Explore The Expert Blogs on the Latest Tech Skills for Shaping Your Career Growth
+            </a>
+            <ul class="featured-post-meta">
+            </ul>
+          </div>
+          <div class="featured-post-thumb">
+            <div class="container-box position-relative">
+              <!-- Yellow Box on sides -->
+              <div class="box-left"></div>
+              <div class="box-right"></div>
+              <!-- Image with border design -->
+              <img src="images/sample.png" alt="feature-post-thumb" class="img-fluid border-box">  
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS to replicate the yellow-black box design -->
+<style>
+  .container-box {
+    position: relative;
+    background-color: black; /* Black background */
+    padding: 20px; /* Space between image and box */
+    border-radius: 15px; /* Rounded corners */
+  }
+
+  .box-left, .box-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    background-color: yellow; /* Yellow side stripes */
+  }
+
+  .box-left {
+    left: -15px;
+  }
+
+  .box-right {
+    right: -15px;
+  }
+
+  .border-box {
+    border: 5px solid yellow; /* Yellow border for the image */
+    border-radius: 10px;
+  }
+
+  /* Ensure responsiveness */
+  @media (max-width: 768px) {
+    .box-left, .box-right {
+      width: 10px; /* Adjust size for smaller screens */
+    }
+  }
+</style>
+
+<!-- below navbar section codes  -->
+
+<!-- Blog Section -->
+<section class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="blog-section-title">
+          <h2>Blogs</h2>
+          <p>The Expert Blogs on the Latest Tech Skills is Here !!</p>
+        </div>
+                <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="fullstackblog.html">
+              <img onclick="showFullStackOptions(event)" src="images/full stack.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="#" onclick="showFullStackOptions(event)">Full Stack Development</a>
+            </div>
+
+            <div class="blog-post-title">
+              <a href="# " onclick="showFullStackOptions(event)">Full Stack Development: Master Both Front-End and Back-End</a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with Full Stack Development Skills</p>
+            <a href="#" onclick="showFullStackOptions(event)" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+        
+        <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="single-blog.html">
+              <img src="images/aawshome.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="single-blog.html">AWS DevOps</a>
+            </div>
+            <div class="blog-post-title">
+              <a href="single-blog.html">Why AWS DevOps is the Future of Efficient Development and Operations</a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with AWS DevOps Skills</p>
+            <a href="single-blog.html" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="softwaretestingblog.html">
+              <img src="images/3.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="softwaretestingblog.html">Software Testing</a>
+            </div>
+            <div class="blog-post-title">
+              <a href="softwaretestingblog.html">Software Testing: The Backbone of High-Quality Software</a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with Software Testing Skills</p>
+            <a href="softwaretestingblog.html" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="businessintelligence.html">
+              <img src="images/4.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="businessintelligence.html">Business Intelligence</a>
+            </div>
+            <div class="blog-post-title">
+              <a href="businessintelligence.html"> Business Intelligence: Unlock the Power of Data</a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with Business Intelligence Skills</p>
+            <a href="businessintelligence.html" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="ccna.html">
+              <img src="images/CCNA.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="ccna.html">Cisco Certified Network Associate</a>
+            </div>
+            <div class="blog-post-title">
+              <a href="ccna.html">CCNA: Your Gateway to a Global Networking </a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with Cisco Certified Network Associate Skills</p>
+            <a href="ccna.html" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-post">
+          <div class="blog-post-thumb">
+            <a href="medicalbilling.html">
+              <img src="images/medicalBilling.png" alt="blog-thum" /></a>
+          </div>
+          <div class="blog-post-content">
+            <div class="blog-post-tag">
+              <a href="medicalbilling.html">Medical Billing</a>
+            </div>
+            <div class="blog-post-title">
+              <a href="medicalbilling.html">Medical Billing: Turning Healthcare Expertise into a High Demand Career</a>
+            </div>
+            <p>Streamline Your Workflow and Boost Your Career with Medical Billing Skills</p>
+            <a href="medicalbilling.html" class="blog-post-action">read more <i class="fa fa-angle-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blogge Section -->
+<section class="blogge-section text-center" style="margin-top: 50px;">
+  <h1 class="blogge-title" style="font-size: 3rem; font-weight: bold;">Jobzenter</h1>
+  
+  <!-- Navigation Links -->
+  <div class="footer-nav" style="margin-top: 20px;">
+    <ul class="navbar-nav" style="list-style: none; padding: 0;">
+      <li class="nav-item" style="display: inline; margin: 0 15px;">
+        <a class="nav-link" href="../index.html" style="text-decoration: none; font-size: 1.2rem; color: #333; font-weight: bold;">HOME</a>
+      </li>
+      <li class="nav-item" style="display: inline; margin: 0 15px;">
+        <a class="nav-link" href="../about.html" style="text-decoration: none; font-size: 1.2rem; color: #333; font-weight: bold;">ABOUT</a>
+      </li>
+      <li class="nav-item" style="display: inline; margin: 0 15px;">
+        <a class="nav-link" href="../courses.html" style="text-decoration: none; font-size: 1.2rem; color: #333; font-weight: bold;">Our Courses</a>
+      </li>
+      <li class="nav-item" style="display: inline; margin: 0 15px;">
+        <a class="nav-link" href="../service.html" style="text-decoration: none; font-size: 1.2rem; color: #333; font-weight: bold;">Our Services</a>
+      </li>
+      
+      <li class="nav-item" style="display: inline; margin: 0 15px;">
+        <a class="nav-link" href="../contact.html" style="text-decoration: none; font-size: 1.2rem; color: #333; font-weight: bold;">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="sociale-icon" style="margin-top: 20px;">
+    <ul style="list-style: none; padding: 0;">
+      <li style="display: inline; margin: 0 10px;">
+        <a href="https://www.facebook.com/profile.php?id=61565616456345&mibextid=ZbWKwL"><i class="fa fa-facebook" style="font-size: 1.5rem; color: #333;"></i></a>
+      </li>
+      <li style="display: inline; margin: 0 10px;">
+        <a href="https://x.com/jobzenter?t=_PtPj4EAYiczqr_fxfSHBg&s=09"><i class="fa fa-twitter" style="font-size: 1.5rem; color: #333;"></i></a>
+      </li>
+      <li style="display: inline; margin: 0 10px;">
+        <a href="https://www.instagram.com/jobzenter_offical?igsh=dWVwdGs1bWM4ZnBp"><i class="fa fa-instagram" style="font-size: 1.5rem; color: #333;"></i></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+@media (max-width: 576px) {
+  .blogge-section {
+    margin-top: 24px !important;
+    padding: 0 12px;
+  }
+
+  .blogge-section .blogge-title {
+    font-size: 1.8rem !important;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  /* Small underline below title */
+  .blogge-section .blogge-title::after {
+    content: "";
+    display: block;
+    width: 40px; /* length of line */
+    height: 2px; /* thickness */
+    background-color: #000; /* color of line */
+    margin: 6px auto 0 auto; /* center the line */
+    border-radius: 2px;
+  }
+
+  /* Single column, centered items */
+  .blogge-section .footer-nav .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blogge-section .footer-nav .navbar-nav .nav-item {
+    display: block !important;
+    text-align: center;
+  }
+
+  .blogge-section .footer-nav .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Social icons centered */
+  .blogge-section .sociale-icon ul {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 0;
+    margin: 14px 0 0 0;
+  }
+  .blogge-section .sociale-icon li {
+    display: inline-flex !important;
+  }
+}
+</style>
+
+<!-- Footer Section -->
+<section class="footer" style="background-color: black; color: white; width: 100%; padding: 20px 0;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="copy-right" style="font-size: 1rem;">
+          <p>© Copyright <span id="copyrightYear"></span> - All Rights Reserved by 
+            <a href="https://jobzenter.in/" target="_blank" style="color: white; text-decoration: none;">Jobzenter</a> 
+
+            <!-- <a href="https://themewagon.com/" target="blank" style="color: white; text-decoration: none;">ThemeWagon</a> -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/g-map/gmap.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+<script>
+function showFullStackOptions(event) {
+  event.preventDefault();
+
+  Swal.fire({
+    title: 'Full Stack Development',
+    html: `
+      <style>
+        /* Force custom button style over SweetAlert2 default */
+        .swal2-container .swal2-html-container .swal-custom-btn {
+          background-color: yellow !important;
+          color: black !important;
+          padding: 10px !important;
+          border: none !important;
+          font-weight: bold !important;
+          cursor: pointer !important;
+          border-radius: 5px !important;
+          transition: all 0.3s ease !important;
+          width: 100% !important;
+          max-width: 350px !important;
+          margin: 0 auto !important;
+          display: block !important;
+        }
+        .swal2-container .swal2-html-container .swal-custom-btn:hover {
+          background-color: black !important;
+          color: yellow !important;
+          transform: scale(1.05) !important;
+          box-shadow: 0 0 10px yellow !important;
+        }
+        /* Mobile responsiveness fix */
+        @media (max-width: 480px) {
+          .swal2-popup {
+            width: 90% !important;
+            font-size: 14px !important;
+          }
+          .swal2-container .swal2-html-container .swal-custom-btn {
+            padding: 8px !important;
+            font-size: 13px !important;
+            max-width: 200px !important;
+          }
+        }
+      </style>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+        <button class="swal-custom-btn" onclick="window.location.href='mernStack.html'">MERN Stack</button>
+        <button class="swal-custom-btn" onclick="window.location.href='reactnative.html'">React Native</button>
+        <button class="swal-custom-btn" onclick="window.location.href='fullstackblog.html'">Java FullStack</button>
+        <button class="swal-custom-btn" onclick="window.location.href='python.html'">Python FullStack</button>
+        <button class="swal-custom-btn" onclick="window.location.href='mean.html'">MEAN Stack</button>
+        <button class="swal-custom-btn" onclick="window.location.href='netang.html'">.NET + Angular</button>
+      </div>
+    `,
+    background: '#000',
+    color: '#fff',
+    showConfirmButton: false,
+  });
+}
+</script>
+
+<script>
+  // Automatically update the copyright year
+  document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+</script>
+
+</body>
+
+</html>
